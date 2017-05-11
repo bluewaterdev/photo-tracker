@@ -1,0 +1,12 @@
+---
+applications:
+- name: photo-tracker
+  # Fork of https://github.com/cloudfoundry/java-buildpack
+  # For stability, keep your own fork.
+  buildpack: https://github.com/cloudfoundry/java-buildpack
+  memory: 1024M
+  instances: 1
+  # Because the URL will be http://photo-tracker.cfapps.io/
+  host: photo-tracker
+  domain: cfapps.io
+  path: target/photo-tracker-0.0.1-SNAPSHOT.jar
